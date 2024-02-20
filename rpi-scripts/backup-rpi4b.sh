@@ -2,7 +2,7 @@
 
 # Default values for in and out files
 in_file="/dev/mmcblk0"
-out_file="/dev/sdb"
+out_file="/mnt/rpi4b-backups-bk/rpi4b-backups-backup.img"
 
 # Parse command-line options
 while getopts ":i:o:" opt; do
@@ -38,7 +38,7 @@ timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 log_file="${log_path}/${script_name}-${timestamp}.log"
 
 echo "############################################################################" >> "$log_file"
-echo "# rpi-backups backup log created $timestamp." >> "$log_file"
+echo "# rpi backup log created $timestamp." >> "$log_file"
 echo "############################################################################" >> "$log_file"
 
 # Perform the backup
